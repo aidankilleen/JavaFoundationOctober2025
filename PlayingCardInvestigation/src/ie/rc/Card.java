@@ -11,11 +11,18 @@ public class Card {
 	
 	// functions / methods
 	
-	// constructor
-	public Card(int suitI, int valueI) {
-		suit = suitI;
-		value = valueI;
+	// constructor(s)
+	public Card() {
+		// constructor that takes no parameters (default constructor)
+		suit = -1;
+		this.value = -1;
 	}
+	
+	public Card(int suit, int value) {
+		this.suit = suit;
+		this.value = value;
+	}
+	
 	public void display() {
 		String card = " ";
 		
@@ -50,7 +57,16 @@ public class Card {
 	
 	public static void main(String[] args) {
 		
-		Card c = new Card(4, 11); // create a card (suit, value) 
+		
+		Card e = new Card();
+		
+		e.suit = 1;
+		e.value = 1;
+		
+		e.display();
+		
+		
+		Card c = new Card(1, 1); // create a card (suit, value) 
 		c.display(); // display the card AH
 		
 		System.out.println();
