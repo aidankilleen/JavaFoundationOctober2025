@@ -19,12 +19,17 @@ public class HRSystem {
 		Person p = new Person("Alice", "Adams");
 		p.display();
 		
-		
 		// Employee - inherit Person and add in employeeId
+		Employee e = new Employee("Bob", "Burns", "E12345");
+		e.display();
 		
 		// Contractor - inherit Person and add in agency
+		Contractor c = new Contractor("Carol", "Conway", "Computer Futures");
+		c.display();
 		
 		// Manager - inherit Employee and add in headCount
+		Manager m = new Manager("Danielle", "Dunne", "E12121", 25);
+		m.display();
 		
 		
 	}
