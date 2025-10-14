@@ -29,7 +29,21 @@ public class Deck {
 				System.out.println();
 			}
 		}
-		System.out.println();
+		System.out.println("\n");
+	}
+	
+	public void shuffle(int count) {
+		for (int i = 0; i < count; i++) {
+			// generate a random number between 0 and 51
+			// (int) converts / casts from double to int
+			int r1 = (int)(Math.random() * 51);
+			int r2 = (int)(Math.random() * 51);
+			
+			// swap the cards at r1 and r2
+			Card t = cards[r1];
+			cards[r1] = cards[r2];
+			cards[r2] = t;
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -37,5 +51,23 @@ public class Deck {
 		
 		Deck d = new Deck();
 		d.display();
+		
+		d.shuffle(1);
+		d.display(); // deck should be different (shuffled)
+		
+		d.shuffle(10);
+		d.display(); // deck should be different (shuffled)
+		
+		d.shuffle(100);
+		d.display(); // deck should be different (shuffled)
+		
+		d.shuffle(1000);
+		d.display(); // deck should be different (shuffled)
+		
 	}
 }
+
+
+
+
+

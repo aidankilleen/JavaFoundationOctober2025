@@ -24,20 +24,23 @@ public class Card {
 	}
 	
 	public void display() {
-		String card = " ";
+		String card = "";
 		
 		if (value == 1) {
-			card += "A";
-		} else if (value >= 2 && value <= 10) {
+			card += " A";
+		} else if (value >= 2 && value <= 9) {
+			card += " " + value;
+		} else if (value == 10) {
 			card += value;
+			
 		} else if (value == 11) {
-			card += "J";
+			card += " J";
 		} else if (value == 12) {
-			card += "Q";
+			card += " Q";
 		} else if (value == 13) {
-			card += "K";
+			card += " K";
 		} else {
-			card += "?";
+			card += " ?";
 		}
 		
 		if (suit == 1) {
