@@ -36,8 +36,8 @@ public class Deck {
 		for (int i = 0; i < count; i++) {
 			// generate a random number between 0 and 51
 			// (int) converts / casts from double to int
-			int r1 = (int)(Math.random() * 51);
-			int r2 = (int)(Math.random() * 51);
+			int r1 = (int)(Math.random() * 52);
+			int r2 = (int)(Math.random() * 52);
 			
 			// swap the cards at r1 and r2
 			Card t = cards[r1];
