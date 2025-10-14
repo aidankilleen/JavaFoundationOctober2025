@@ -4,12 +4,37 @@ public class Card {
 
 	// properties / member variables
 	// suit - H=1, S=2, D=3, C=4
-	public int suit;
+	private int suit;
 	
 	// value = A=1, 2=2, 3=3, ..., 10=10, J=11, Q=12, K=13
-	public int value;
+	private int value;
 	
 	// functions / methods
+	public int getSuit() {
+		return suit;
+	}
+	public int getValue() {
+		return value;
+	}
+	
+	public void setSuit(int suit) {
+		
+		if (suit >= 1 && suit <= 4) {
+			this.suit = suit;
+		} else {
+			// handle erroneous values appropriately
+			System.out.println("Invalid suit:" + suit);
+		}
+	}
+	public void setValue(int value) {
+		if (value >= 1 && value <= 13) {
+			this.value = value;
+		} else {
+			System.out.println("Invalid value:" + value);
+			
+		}
+	}
+	
 	
 	// constructor(s)
 	public Card() {
@@ -63,12 +88,12 @@ public class Card {
 		
 		Card e = new Card();
 		
-		e.suit = 1;
-		e.value = 1;
+		e.suit = 1000;
+		e.value = 1000;
 		
 		e.display();
 		
-		
+		/*
 		Card c = new Card(1, 1); // create a card (suit, value) 
 		c.display(); // display the card AH
 		
@@ -84,5 +109,6 @@ public class Card {
 			}
 			System.out.println();
 		}
+		*/
 	}
 }
