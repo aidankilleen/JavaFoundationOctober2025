@@ -34,6 +34,8 @@ public class Manager extends Employee {
 	public void display() {
 		
 		System.out.println("Manager:");
+		System.out.println(this.firstName);
+		
 		super.display();
 		System.out.println("Headcount:" + headCount);
 	}

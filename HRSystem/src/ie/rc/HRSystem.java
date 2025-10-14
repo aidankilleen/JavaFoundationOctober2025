@@ -31,7 +31,7 @@ public class HRSystem {
 		Manager m = new Manager("Danielle", "Dunne", "E12121", 25);
 		m.display();
 		
-		
+		System.out.println("=============");
+		System.out.println(m.firstName);
 	}
-
 }

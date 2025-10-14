@@ -2,8 +2,8 @@ package ie.rc;
 
 public class Person {
 	// member variables
-	private String firstName;
-	private String lastName;
+	protected String firstName;
+	protected String lastName;
 	
 	// member functions
 	// constructor(s)	
