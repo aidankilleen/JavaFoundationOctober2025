@@ -1,13 +1,17 @@
+ // imports everything from the package
+
 import ie.pt.SampleClass;
-
-import ie.rc.*; // imports everything from the package
-
-
 
 public class Main {
 
 	public static void main(String[] args) {
 
+		
+		SampleClass c = new SampleClass();
+		
+		
+		
+		
 
 		System.out.println("Package Investigation");
 

@@ -7,6 +7,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
+
+		
+		
 		String[] names = {"Alice", "Bob", "Carol", "Dan" };
 		
 		ArrayList al = new ArrayList();
