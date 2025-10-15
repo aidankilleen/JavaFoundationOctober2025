@@ -49,21 +49,5 @@ public class PolymorphismInvestigation {
 			// there is no getHeadCount() function in Person
 			//System.out.println(p.getHeadCount());
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 	}
-
 }

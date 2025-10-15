@@ -17,7 +17,7 @@ public class Main {
 		
 		// Encapsulation
 		// the ability to control access of the elements (data & functions) of an object
-		// public and private 
+		// public, private and protected
 
 		
 		// Inheritance
@@ -26,7 +26,9 @@ public class Main {
 		
 		
 		// Polymorphism
-		// TODO - look at this when we have some objects created
+		// The ability for different objects to behave as if they are the same
+		// you can create a heterogenous list
+		// NB: you need to have a common base class
 		
 		
 		// Goals of OO Programming
