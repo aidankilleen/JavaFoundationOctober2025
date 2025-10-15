@@ -7,6 +7,26 @@ public class Main {
 		System.out.println("HR System");
 		
 		
+		Manager mm = new Manager("Alice", "Adams", "E123", 15);
+		
+		// you can always assign something lower down the class hierarchy
+		// to a super class
+		Person p = mm;
+		
+		// you can't directly assign something lower to something higher
+		// use a cast - as long as you are sure that it is actually that type!
+		Manager mm2 = (Manager)p;
+		
+		Person pc = new Contractor("Charlie", "Conway", "Computer Futures");
+		Manager mm3 = (Manager)pc;
+		
+		
+		
+		
+		
+		
+		
+		
 		// Features of an OO Programming language
 		
 		// Abstraction
