@@ -13,8 +13,45 @@ public class BoxInvestigation {
 		
 		// Create a ColouredBox class
 		
-		ColouredBox cb = new ColouredBox(10, 10, "RED");
+		ColouredBox cb = new ColouredBox(5, 5, "RED");
 		cb.display();
+		
+		
+		ColouredBox cbg = new ColouredBox(8, 3, "GREEN");
+		cbg.displayOutline();
+		
+		ColouredBox cbb = new ColouredBox(10, 4, "BLUE");
+		cbb.display();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        System.out.println("ASCII: ABC abc 123");
+        System.out.println("Accents: é ñ ü ø å");
+        System.out.println("Math: ∑ ∞ √ π ≈");
+        System.out.println("Arrows: ← ↑ → ↓ ↔ ↕");
+        System.out.println("Emoji: 😀 🚀 🎉");
+
+        
+        System.out.println("Single box:");
+        System.out.println("┌───────┐");
+        System.out.println("│ Hello │");
+        System.out.println("└───────┘");
+        
 		
 	}
 
