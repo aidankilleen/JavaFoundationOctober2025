@@ -43,7 +43,7 @@ public class Main {
 			// anything else that causes and exception will be handled by 
 			// this exception (Catch all exception)
 			System.out.println("something went wrong");
-		}
+		} 
 		
 		System.out.println("Answer = " + answer);
 		System.out.println("finished");
