@@ -21,12 +21,10 @@ public class SQLiteInvestigation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		String url = "jdbc:sqlite:C:\\work\\training\\java\\JavaFoundationOctober2025\\users.db";
 		
-		// DriverManager.getConnection(url);
-		
-		
+		//DriverManager.getConnection(url);
 		
 		try {
 			Connection conn = DriverManager.getConnection(url);
@@ -35,10 +33,19 @@ public class SQLiteInvestigation {
 			ResultSet rs = stmt.executeQuery(sql);
 			
 			while (rs.next() ) {
-				boolean active = rs.getBoolean(4);
+				//boolean active = rs.getBoolean(4);
 				
-				System.out.printf("%d %s %s\n", 
-						rs.getInt(1), rs.getString(2), rs.getString(3));
+				//System.out.printf("%d %s %s\n", 
+				//		rs.getInt(1), rs.getString(2), rs.getString(3));
+				
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				String email = rs.getString("email");
+				boolean active = rs.getBoolean("active");
+				
+				User u = new User(id, name, email, active);
+				System.out.println(u);
+				
 			}
 			conn.close();
 		} catch (SQLException e) {
