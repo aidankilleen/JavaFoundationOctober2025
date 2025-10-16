@@ -9,6 +9,8 @@ public class Main {
 		
 		UserDao dao = new UserDao();
 		
+		
+		
 		ArrayList<User>users = dao.getAll();
 		
 		for (User u : users) {
@@ -32,7 +34,6 @@ public class Main {
 		User addedUser = dao.add(userToAdd);
 		
 		System.out.println(addedUser);
-		
 		
 		
 		dao.close();

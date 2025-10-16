@@ -3,20 +3,31 @@ package ie.rc.oouserdb;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * UserDAO
+ * Data Access Object For User Objects into and out of the sqlite database
+ */
 public class UserDao {
 
 	private Connection conn;
 	private String url = "jdbc:sqlite:C:\\work\\training\\java\\JavaFoundationOctober2025\\users.db";
-	
+
+	/**
+	 * UserDao Constructor
+	 * Create dao and open database connection.
+	 * NB: please call dao.close() when finished with db
+	 */
 	public UserDao() {
-		
+	
 		try {
 			conn = DriverManager.getConnection(url);
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}
 	}
-	
+	/**
+	 * @return ArrayList<User> of all users in the database
+	 */
 	public ArrayList<User> getAll() {
 		// run a query to get all users from db
 		ArrayList<User> users = new ArrayList<User>();
@@ -42,6 +53,10 @@ public class UserDao {
 		return users;
 	}
 
+	/**
+	 * 
+	 * @param id - the id of the user to be deleted
+	 */
 	public void delete(int id) {
 		String sql = "DELETE FROM users WHERE id=" + id;
 		try {
@@ -52,6 +67,11 @@ public class UserDao {
 		}
 	}
 
+	/**
+	 * 
+	 * @param userToUpdate - user object to modify
+	 * Note: the userToUpdate.id is used to identify the user in the database
+	 */
 	public void update(User userToUpdate) {
 		String sql = "UPDATE users "
 				+ "SET "
@@ -67,6 +87,11 @@ public class UserDao {
 		}
 	}
 
+	/**
+	 * 
+	 * @param userToAdd - the user object to insert - userToAdd.id is ignored and will be replaced by auto generated id
+	 * @return the newly created user including the id
+	 */
 	public User add(User userToAdd) {
 		
 		String sql = "INSERT INTO users "
@@ -85,13 +110,15 @@ public class UserDao {
 				int newId = rs.getInt(1);
 				userToAdd.setId(newId);
 			}
-			
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}
 		return userToAdd;
 	}
 	
+	/**
+	 * Please call this method to close the database connection
+	 */
 	public void close() {
 		try {
 			conn.close();
