@@ -78,10 +78,18 @@ public class UserDao {
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.execute(sql);
+			
+			// retrieve generated id
+			ResultSet rs = stmt.getGeneratedKeys();
+			if (rs.next()) {
+				int newId = rs.getInt(1);
+				userToAdd.setId(newId);
+			}
+			
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 		}
-		return null;
+		return userToAdd;
 	}
 	
 	public void close() {
