@@ -11,19 +11,30 @@ public class Main {
 		
 		ArrayList<User>users = dao.getAll();
 		
+		for (User u : users) {
+			
+			System.out.println(u);
+		}
+		
+		dao.delete(2);
+		
+		User userToUpdate = users.get(0);
+		
+		userToUpdate.setName("CHANGED");
+		userToUpdate.setEmail("changed@gmail.com");
+		userToUpdate.setActive(!userToUpdate.isActive());
+		dao.update(userToUpdate);
+		
+		
+		User userToAdd = new User(-1, "New User", "new.user@gmail.com", false);
+		
+		
+		User addedUser = dao.add(userToAdd);
+		
+		System.out.println(addedUser);
 		
 		
 		
-		//User u = new User(1, "alice", "alice@gamil.com", true);
-		
-		//System.out.println(u);
-		
-		
-		//dao.getAll();
-		//dao.delete(1);
-		//dao.update(user);
-		//dao.create(user);
-
+		dao.close();
 	}
-
 }

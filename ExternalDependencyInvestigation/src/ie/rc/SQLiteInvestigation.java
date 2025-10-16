@@ -48,6 +48,8 @@ public class SQLiteInvestigation {
 				
 			}
 			conn.close();
+			
+			
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
