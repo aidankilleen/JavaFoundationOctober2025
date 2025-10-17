@@ -17,6 +17,13 @@ public class HRSystem {
 		
 		// Person - firstName, lastName
 		Person p = new Person("Alice", "Adams");
+		
+		// p.firstname is accessible
+		// because it is in the same package
+		System.out.println(p.firstName);
+		
+		
+		
 		p.display();
 		
 		// Employee - inherit Person and add in employeeId
